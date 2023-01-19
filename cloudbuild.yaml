@@ -1,0 +1,13 @@
+steps:
+
+# Build hello-app:1.0.
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    - 'build'
+    - '-t'
+    - 'gcr.io/umeshkumhar-1/hello-app:1.0'
+    - '.'
+
+# Push images.
+images:
+  - 'gcr.io/umeshkumhar-1/hello-app:1.0'
